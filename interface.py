@@ -2,7 +2,7 @@ import streamlit as st
 from main import SentimentAnalyzer, Dataset
 st.set_page_config(
     page_title='Sentiment Analysis Project',
-    page_icon=':sunglasses:',
+    page_icon=':fire:',
     layout='centered',
     initial_sidebar_state='auto'
 )
