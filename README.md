@@ -18,6 +18,22 @@
 | `trainDataPercentage*` | `int` |Eğitim alanının yüzdeliği |
 | `get_reviews_and_labels` | `function` |Verisetini test ve eğitim, yorum ve durum olarak dörde ayırır |
 
+#### Model
+
+```
+  main.SentimentAnalyzer
+```
+
+| İsim | Tip     | Açıklama                |
+| :-------- | :------- | :------------------------- |
+| `dataset*` | `tuple` |Dört elemana parçanlanmış veriseti  |
+| `tokenize*` | `function` |TextVectorization kullanılır |
+| `most_common_words` | `function` |En çok kullanılan 10 kelime yazdırılır, 1000 kelime döndürülür |
+| `build_layers` | `function` |Modeli oluşturur ya da yükler |
+| `performance_info` | `function` |Loss, Accuarcy değerlerini gösterir |
+| `predict_test_review` | `function` |Test verilerini sınar |
+| `predict_review` | `function` |Gelen değerin negatifliğini yorumlar |
+| `save` | `function` |Modeli kaydeder |
 
   
 ## Bilgisayarınızda Çalıştırın
@@ -46,5 +62,17 @@ Sunucuyu çalıştırın
 ```bash
   python3 run.py
 ```
+
+  
+## Ekran Görüntüleri
+
+![Uygulama Ekran Görüntüsü](https://i.hizliresim.com/smzp8wt.jpg)
+
+  
+## Kullanılan Teknolojiler
+
+**Interface:** Streamlit
+
+**Background:** Python, Tensorflow, Numpy, Pandas
 
   
