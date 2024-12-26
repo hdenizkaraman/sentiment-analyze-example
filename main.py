@@ -5,9 +5,9 @@ import chardet
 from functools import wraps
 
 class Dataset:
-    def __init__(self, datasetPath:str, testDataPercentage:int)->None:
+    def __init__(self, datasetPath:str, trainDataPercentage:int)->None:
         self.datasetPath = datasetPath
-        self.testDataPercentage = testDataPercentage
+        self.trainDataPercentage = trainDataPercentage
         self.dataset = None
         self.encoding = None
         self.__load_dataset()
@@ -41,7 +41,7 @@ class Dataset:
     
     @__check_dataset_loaded
     def __split_dataset_train_test(self) -> tuple:
-        cutoff:float = len(self.dataset)*self.testDataPercentage//100
+        cutoff:float = len(self.dataset)*self.trainDataPercentage//100
         train = self.dataset[:int(cutoff)]
         test = self.dataset[int(cutoff):]
         return train, test
